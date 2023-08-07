@@ -2,28 +2,23 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] num_list) {
-        int[] list = new int[num_list.length+1];
+        List<int> nums = new ArrayList<>();
         
         int size = num_list.length-1;
         int last =  num_list[size];
         int Previous =  num_list[size-1];
         int num = 0;
         
-        for(int i =0; i<list.length-1; i++){
-            list[i] = num_list[i];
-        }
-        
-
+        //마지막 idx가 더 크면 이전 값 -해줌
+        //아니라면 마지막idx값을 *2
         if(last>Previous){
             num = last-Previous;
-            list[num_list.length] = num;
         }else{
             num = last*2;
-            list[num_list.length] = num;
         }
-        
+        System.out.println(num);
 
      
-        return list;
+        return nums;
     }
 }
