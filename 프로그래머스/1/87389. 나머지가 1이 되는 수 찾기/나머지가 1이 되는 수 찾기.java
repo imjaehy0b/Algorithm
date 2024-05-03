@@ -4,7 +4,8 @@ class Solution {
     
         for(int i=1; i<=n; i++){
             if(n%i==1){
-                if(i<answer) answer=i;
+                answer = i;
+                break;
             }
         }
         
