@@ -17,7 +17,7 @@ for(let i=1; i<=n; i++){
     const arr1 = input[i].split(' ').map(Number);
     const arr2 = input[i+n].split(' ').map(Number);
     
-    const result = arr1.map((x,y) => x+arr2[y]);
+    const result = arr1.map((arr1Num,idx) => arr1Num+arr2[idx]);
     
 
     console.log(...result)
