@@ -1,28 +1,19 @@
+import java.util.*;
 class Solution {
     public int[] solution(int[][] score) {
+        List<Integer> rank = new ArrayList<>();
+        for(int[] i : score){
+            rank.add(i[0]+i[1]);
+        }
+        rank.sort(Comparator.reverseOrder());
+        
+        
         int[] answer = new int[score.length];
-        double[] rank = new double[score.length];
-        for(int i=0; i<answer.length; i++){
-            answer[i] = 1;
+        int idx = 0;
+        for(int i=0; i<score.length; i++){
+            idx = rank.indexOf(score[i][0] + score[i][1]);
+            answer[i] = idx+1;
         }
-        
-        for(int i=0; i<rank.length; i++){
-            int[] inner = score[i];
-            for(int j=0; j<inner.length; j++){
-                rank[i] += inner[j];
-            }
-            rank[i] = (double)rank[i]/2;
-        }
-        
-        for(int i=0; i<rank.length;i++){
-            for(int j=0; j<rank.length; j++){
-                if(rank[i]<rank[j] && i!=j){
-                    answer[i] += 1;    
-                }
-            }
-        }
-
-                
         return answer;
     }
 }
