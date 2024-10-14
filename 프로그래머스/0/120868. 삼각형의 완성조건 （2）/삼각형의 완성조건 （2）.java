@@ -6,16 +6,13 @@ class Solution {
         // a + b > c
         // a + c > b
         // b + c > a
-        //두 변을 제공.
 
-        int a = sides[0];
-        int b = sides[1];
-        int max = Math.max(a,b);
-        int min = Math.min(a,b);
+        int max = Math.max(sides[0],sides[1]);
+        int min = Math.min(sides[0],sides[1]);
         
         ArrayList<Integer> list = new ArrayList<>();
         
-        for(int i=(max-min)+1; i<a+b; i++){
+        for(int i=(max-min)+1; i<max+min; i++){
              list.add(i);
         }
         

@@ -1,10 +1,10 @@
 # [level 0] 삼각형의 완성조건 (2) - 120868 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120868) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120868?language=java) 
 
 ### 성능 요약
 
-메모리: 71.1 MB, 시간: 1.08 ms
+메모리: 73.9 MB, 시간: 0.52 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 10월 14일 15:01:47
+2024년 10월 14일 15:03:33
 
 ### 문제 설명
 
