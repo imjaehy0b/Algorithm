@@ -1,22 +1,20 @@
 class Solution {
     public int[] solution(int n, int m) {
-        int[] answer = new int[2];
-        answer[0] = gcd(n,m);
-        answer[1] = lcm(n,m,gcd(n,m));
-        
+        int[] answer = gcdlcm(n,m);
         return answer;
     }
     
-    public int gcd(int a, int b){
-        while(b>0){
-            int temp = a;
-            a = b;
-            b = temp%b;
-        }
-        return a;
+    public int[] gcdlcm(int a, int b) {
+        int[] answer = new int[2];
+
+        answer[0] = gcd(a,b);
+        answer[1] = (a*b)/answer[0];
+        return answer;
     }
-    
-    public int lcm(int a,int b, int gcd){
-        return (a*b)/gcd;
+
+    public static int gcd(int p, int q)
+    {
+     if (q == 0) return p;
+     return gcd(q, p%q);
     }
 }
