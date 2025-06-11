@@ -10,10 +10,9 @@ public class Main{
     private void solution() throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        BigInteger a = new BigInteger(st.nextToken());
-        BigInteger b = new BigInteger(st.nextToken());
+        BigInteger result = new BigInteger(st.nextToken()).add(new BigInteger(st.nextToken()));
         
-        System.out.println(a.add(b));
+        System.out.println(result);
         br.close();
     }
 }
